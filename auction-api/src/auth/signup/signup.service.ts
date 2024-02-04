@@ -42,7 +42,7 @@ export class SignUpService {
       }
 
 
-      await this.emailService.sendMailTo('pab203.guti@gmail.com', verificationCode);
+      await this.emailService.sendMailTo(user.email, verificationCode);
 
       this.logger.log('User created succesfully, pending validation');
 
