@@ -5,10 +5,10 @@ import { UpdateAuthDto } from './dto/update-auth.dto';
 
 @Controller('signin')
 export class SignInController {
-  constructor(private readonly authService: SignInController) {}
+  constructor(private readonly signInService: SignInService) {}
 
   @Post()
   create(@Body() createSignInDto: CreateSignInDto) {
-    return this.authService.create(createSignInDto);
+    return this.signInService.create(createSignInDto);
   }
 }
